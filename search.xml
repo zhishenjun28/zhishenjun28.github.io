@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>coding</title>
-    <url>/2022/01/19/hexocodinggitee/</url>
-    <content><![CDATA[<h3 id="一：我选择coding"><a href="#一：我选择coding" class="headerlink" title="一：我选择coding"></a>一：我选择coding</h3><p><a href="https://cloud.tencent.com/developer/article/1873689">https://cloud.tencent.com/developer/article/1873689</a></p>
-<h3 id="二：使用-Hexo-Gitee-快速搭建属于自己的博客"><a href="#二：使用-Hexo-Gitee-快速搭建属于自己的博客" class="headerlink" title="二：使用 Hexo + Gitee 快速搭建属于自己的博客"></a>二：使用 Hexo + Gitee 快速搭建属于自己的博客</h3><p><a href="https://cloud.tencent.com/developer/article/1766149?from=article.detail.1343935">https://cloud.tencent.com/developer/article/1766149?from=article.detail.1343935</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>hexoMatery</title>
     <url>/2022/01/18/hexomatery/</url>
     <content><![CDATA[<h3 id="一：hexo-theme-matery-源作者-（我自己使用的是它）"><a href="#一：hexo-theme-matery-源作者-（我自己使用的是它）" class="headerlink" title="一：hexo-theme-matery 源作者 （我自己使用的是它）"></a>一：hexo-theme-matery 源作者 （我自己使用的是它）</h3><p><a href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md">https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md</a></p>
@@ -1963,75 +1956,6 @@ login<span class="token punctuation">(</span>request<span class="token punctuati
 
 <p><img src="https://img-blog.csdnimg.cn/20190425155543290.png" alt="在这里插入图片描述"></p>
 
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/02/08/linux-zhong-xu-ni-huan-jing-de-chuang-jian-yu-shi-yong/</url>
-    <content><![CDATA[  <p><strong>问题：</strong> 安装同一个包的不同版本，后安装的包会把原来安装的包覆盖掉。这样，如同一台机器上的俩个项目依赖于相同包的不同版本，则会导致一些项目运行失败。<br>
-<strong>解决的方法就是：</strong> 虚拟环境</p>
-<hr>
-<h4><a id="_4"></a>虚拟环境：</h4>
-<p>  虚拟环境是真实python环境的复制版本，可以安装不同的版本的包，然后新的包会覆盖旧的包<br>
-  在虚拟环境中使用的python是复制的python，安装python包也是安装在复制的python中。<br>
-&nbsp;</p>
-<p><strong>安装流程：</strong></p>
-<ol>
-<li>sudo pip3 install virtualenv # 安装虚拟环境</li>
-<li>sudo pip3 install virtualenvwrapper # 安装虚拟环境扩展包</li>
-<li>编辑家目录下的 vi /home/shuan/.bashrc文件，添加下面代码：</li>
-</ol>
-<pre class="prettyprint"><code class="prism language-python has-numbering" onclick="mdcp.copyCode(event)" style="position: unset;">    <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token operator">-</span>f <span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span><span class="token builtin">bin</span><span class="token operator">/</span>virtualenvwrapper<span class="token punctuation">.</span>sh <span class="token punctuation">]</span><span class="token punctuation">;</span> then
-        export WORKON_HOME<span class="token operator">=</span>$HOME<span class="token operator">/</span><span class="token punctuation">.</span>virtualenvs
-        export VIRTUALENVWRAPPER_PYTHON<span class="token operator">=</span><span class="token operator">/</span>usr<span class="token operator">/</span><span class="token builtin">bin</span><span class="token operator">/</span>python3
-        source <span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span><span class="token builtin">bin</span><span class="token operator">/</span>virtualenvwrapper<span class="token punctuation">.</span>sh
-    fi
-
-<ol start="4">
-<li>使用source .bashrc使其生效一下</li>
-</ol>
-<p><strong>创建、启动、删除、退出命令</strong></p>
-
-<div class="table-box"><table>
-<thead>
-<tr>
-<th>命令</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>mkvirtualenv -p python3 虚拟环境名</td>
-<td>创建虚拟环境的命令</td>
-</tr>
-<tr>
-<td>workon 虚拟环境名</td>
-<td>进入虚拟环境工作</td>
-</tr>
-<tr>
-<td>workon 空格+俩个tab键</td>
-<td>查看机器上有多少个虚拟环境</td>
-</tr>
-<tr>
-<td>deactivate</td>
-<td>退出虚拟环境</td>
-</tr>
-<tr>
-<td>rmvirtualenv 虚拟环境名</td>
-<td>删除虚拟环境</td>
-</tr>
-</tbody>
-</table></div><p>&nbsp;</p>
-<p><strong>启动后显示：</strong><br>
-<img src="https://img-blog.csdnimg.cn/20190316093025257.png" alt="在这里插入图片描述"><br>
-前面有(虚拟环境名字）就表示成功进入虚拟环境<br>
-&nbsp;</p>
-<hr>
-<p><strong>在虚拟环境中安装包的命令：<br>
-pip3 install 包名</strong><br>
-<strong>注意点：</strong> 不能使用sudo pip3 install 报名。这个命令会把安装包安装到真实的主机环境上而不是安装到虚拟环境中。</p>
-
-                                 
 ]]></content>
   </entry>
   <entry>
@@ -5662,6 +5586,75 @@ API_ENABLED <span class="token operator">=</span> <span class="token boolean">Tr
 <p><img src="https://pics6.baidu.com/feed/77c6a7efce1b9d1655ddedc62b7a78868d5464a9.jpeg?token=47053cf39991234a798810527256c526" alt="img"></p>
 <p>此时自动更新的这个服务已经无法进行查看，且这一服务已经完全禁止了！</p>
 <p>如果你有win10自动更新的困扰，那就赶紧试试上述方法吧~</p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/02/08/python-xu-ni-huan-jing-de-chuang-jian-yu-shi-yong/</url>
+    <content><![CDATA[  <p><strong>问题：</strong> 安装同一个包的不同版本，后安装的包会把原来安装的包覆盖掉。这样，如同一台机器上的俩个项目依赖于相同包的不同版本，则会导致一些项目运行失败。<br>
+<strong>解决的方法就是：</strong> 虚拟环境</p>
+<hr>
+<h4><a id="_4"></a>虚拟环境：</h4>
+<p>  虚拟环境是真实python环境的复制版本，可以安装不同的版本的包，然后新的包会覆盖旧的包<br>
+  在虚拟环境中使用的python是复制的python，安装python包也是安装在复制的python中。<br>
+&nbsp;</p>
+<p><strong>安装流程：</strong></p>
+<ol>
+<li>sudo pip3 install virtualenv # 安装虚拟环境</li>
+<li>sudo pip3 install virtualenvwrapper # 安装虚拟环境扩展包</li>
+<li>编辑家目录下的 vi /home/shuan/.bashrc文件，添加下面代码：</li>
+</ol>
+<pre class="prettyprint"><code class="prism language-python has-numbering" onclick="mdcp.copyCode(event)" style="position: unset;">    <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token operator">-</span>f <span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span><span class="token builtin">bin</span><span class="token operator">/</span>virtualenvwrapper<span class="token punctuation">.</span>sh <span class="token punctuation">]</span><span class="token punctuation">;</span> then
+        export WORKON_HOME<span class="token operator">=</span>$HOME<span class="token operator">/</span><span class="token punctuation">.</span>virtualenvs
+        export VIRTUALENVWRAPPER_PYTHON<span class="token operator">=</span><span class="token operator">/</span>usr<span class="token operator">/</span><span class="token builtin">bin</span><span class="token operator">/</span>python3
+        source <span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span><span class="token builtin">bin</span><span class="token operator">/</span>virtualenvwrapper<span class="token punctuation">.</span>sh
+    fi
+
+<ol start="4">
+<li>使用source .bashrc使其生效一下</li>
+</ol>
+<p><strong>创建、启动、删除、退出命令</strong></p>
+
+<div class="table-box"><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mkvirtualenv -p python3 虚拟环境名</td>
+<td>创建虚拟环境的命令</td>
+</tr>
+<tr>
+<td>workon 虚拟环境名</td>
+<td>进入虚拟环境工作</td>
+</tr>
+<tr>
+<td>workon 空格+俩个tab键</td>
+<td>查看机器上有多少个虚拟环境</td>
+</tr>
+<tr>
+<td>deactivate</td>
+<td>退出虚拟环境</td>
+</tr>
+<tr>
+<td>rmvirtualenv 虚拟环境名</td>
+<td>删除虚拟环境</td>
+</tr>
+</tbody>
+</table></div><p>&nbsp;</p>
+<p><strong>启动后显示：</strong><br>
+<img src="https://img-blog.csdnimg.cn/20190316093025257.png" alt="在这里插入图片描述"><br>
+前面有(虚拟环境名字）就表示成功进入虚拟环境<br>
+&nbsp;</p>
+<hr>
+<p><strong>在虚拟环境中安装包的命令：<br>
+pip3 install 包名</strong><br>
+<strong>注意点：</strong> 不能使用sudo pip3 install 报名。这个命令会把安装包安装到真实的主机环境上而不是安装到虚拟环境中。</p>
+
+                                 
 ]]></content>
   </entry>
 </search>

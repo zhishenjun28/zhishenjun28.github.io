@@ -4,9 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="coding, 稚神君&#39;s Blog">
-    <meta name="description" content="一：我选择codinghttps://cloud.tencent.com/developer/article/1873689
-二：使用 Hexo + Gitee 快速搭建属于自己的博客https://cloud.tencent.com/de">
+    <meta name="keywords" content="稚神君&#39;s Blog">
+    <meta name="description" content="  问题： 安装同一个包的不同版本，后安装的包会把原来安装的包覆盖掉。这样，如同一台机器上的俩个项目依赖于相同包的不同版本，则会导致一些项目运行失败。
+解决的方法就是： 虚拟环境
+
+虚拟环境：
+  虚拟环境是真实python环境的复制版本，">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +21,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>coding | 稚神君&#39;s Blog</title>
+    <title>稚神君&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon3.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -266,12 +269,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">coding</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -399,7 +402,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-01-19
+                    2022-02-08
                 </div>
                 
 
@@ -408,7 +411,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    38
+                    396
                 </div>
                 
 
@@ -438,8 +441,70 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="一：我选择coding"><a href="#一：我选择coding" class="headerlink" title="一：我选择coding"></a>一：我选择coding</h3><p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1873689">https://cloud.tencent.com/developer/article/1873689</a></p>
-<h3 id="二：使用-Hexo-Gitee-快速搭建属于自己的博客"><a href="#二：使用-Hexo-Gitee-快速搭建属于自己的博客" class="headerlink" title="二：使用 Hexo + Gitee 快速搭建属于自己的博客"></a>二：使用 Hexo + Gitee 快速搭建属于自己的博客</h3><p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1766149?from=article.detail.1343935">https://cloud.tencent.com/developer/article/1766149?from=article.detail.1343935</a></p>
+                  <p><strong>问题：</strong> 安装同一个包的不同版本，后安装的包会把原来安装的包覆盖掉。这样，如同一台机器上的俩个项目依赖于相同包的不同版本，则会导致一些项目运行失败。<br>
+<strong>解决的方法就是：</strong> 虚拟环境</p>
+<hr>
+<h4><a id="_4"></a>虚拟环境：</h4>
+<p>  虚拟环境是真实python环境的复制版本，可以安装不同的版本的包，然后新的包会覆盖旧的包<br>
+  在虚拟环境中使用的python是复制的python，安装python包也是安装在复制的python中。<br>
+&nbsp;</p>
+<p><strong>安装流程：</strong></p>
+<ol>
+<li>sudo pip3 install virtualenv # 安装虚拟环境</li>
+<li>sudo pip3 install virtualenvwrapper # 安装虚拟环境扩展包</li>
+<li>编辑家目录下的 vi /home/shuan/.bashrc文件，添加下面代码：</li>
+</ol>
+<pre class="prettyprint"><code class="prism language-python has-numbering" onclick="mdcp.copyCode(event)" style="position: unset;">    <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token operator">-</span>f <span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span><span class="token builtin">bin</span><span class="token operator">/</span>virtualenvwrapper<span class="token punctuation">.</span>sh <span class="token punctuation">]</span><span class="token punctuation">;</span> then
+        export WORKON_HOME<span class="token operator">=</span>$HOME<span class="token operator">/</span><span class="token punctuation">.</span>virtualenvs
+        export VIRTUALENVWRAPPER_PYTHON<span class="token operator">=</span><span class="token operator">/</span>usr<span class="token operator">/</span><span class="token builtin">bin</span><span class="token operator">/</span>python3
+        source <span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span><span class="token builtin">bin</span><span class="token operator">/</span>virtualenvwrapper<span class="token punctuation">.</span>sh
+    fi
+
+<ol start="4">
+<li>使用source .bashrc使其生效一下</li>
+</ol>
+<p><strong>创建、启动、删除、退出命令</strong></p>
+
+<div class="table-box"><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mkvirtualenv -p python3 虚拟环境名</td>
+<td>创建虚拟环境的命令</td>
+</tr>
+<tr>
+<td>workon 虚拟环境名</td>
+<td>进入虚拟环境工作</td>
+</tr>
+<tr>
+<td>workon 空格+俩个tab键</td>
+<td>查看机器上有多少个虚拟环境</td>
+</tr>
+<tr>
+<td>deactivate</td>
+<td>退出虚拟环境</td>
+</tr>
+<tr>
+<td>rmvirtualenv 虚拟环境名</td>
+<td>删除虚拟环境</td>
+</tr>
+</tbody>
+</table></div><p>&nbsp;</p>
+<p><strong>启动后显示：</strong><br>
+<img src="https://img-blog.csdnimg.cn/20190316093025257.png" alt="在这里插入图片描述"><br>
+前面有(虚拟环境名字）就表示成功进入虚拟环境<br>
+&nbsp;</p>
+<hr>
+<p><strong>在虚拟环境中安装包的命令：<br>
+pip3 install 包名</strong><br>
+<strong>注意点：</strong> 不能使用sudo pip3 install 报名。这个命令会把安装包安装到真实的主机环境上而不是安装到虚拟环境中。</p>
+
+                                 
 
                 
             </div>
@@ -466,7 +531,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://zhishenjun28.github.io/2022/01/19/hexocodinggitee/">https://zhishenjun28.github.io/2022/01/19/hexocodinggitee/</a>
+                    <a href="https://zhishenjun28.github.io/2022/02/08/python-xu-ni-huan-jing-de-chuang-jian-yu-shi-yong/">https://zhishenjun28.github.io/2022/02/08/python-xu-ni-huan-jing-de-chuang-jian-yu-shi-yong/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -553,7 +618,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/01/21/zi-ji-yu-dao-de-bug-jie-jue-jing-yan-esp32-tft-fen-guang-leng-jing-shi-xian-tou-ming-xiao-dian-shi-md/">
+                <a href="/2022/02/08/python-zhong-dan-li-mo-shi-xiang-xi-jie-xi-mian-shi-ti-mu/">
                     <div class="card-image">
                         
                         
@@ -570,7 +635,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-21
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-02-08
                         </span>
                         <span class="publish-author">
                             
@@ -590,13 +655,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/01/19/wechatpubicnumber/">
+                <a href="/2022/02/08/ru-he-qu-bie-cookie-yu-session/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="wechatPubicNumber">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">wechatPubicNumber</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -607,7 +672,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-08
                             </span>
                         <span class="publish-author">
                             
@@ -763,7 +828,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">47k</span>
+                        class="white-color">46.9k</span>
             
             
             
