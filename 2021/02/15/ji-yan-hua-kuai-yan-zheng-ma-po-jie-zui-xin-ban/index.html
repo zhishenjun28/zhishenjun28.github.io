@@ -4,9 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="稚神君&#39;s Blog">
-    <meta name="description" content="一、简述：   最近无聊想搞一下极验的滑块验证码破解这块，发现破解js代码耗时又耗力出现版本更新可能以前的所有努力都要推翻重做，不够通用性，最后还是选用selenium + PIL 来实现滑块验证码的破解。
-   期间也翻阅过很多文章,大多">
+    <meta name="keywords" content="极验3.0滑块验证码破解, 稚神君&#39;s Blog">
+    <meta name="description" content="一、简述：   最近无聊想搞一下极验的滑块验证码破解这块，发现破解js代码耗时又耗力出现版本更新可能以前的所有努力都要推翻重做，不够通用性，最后还是选用selenium + PIL 来实现滑块验证码的破解。   期间也翻阅过很多文章,大多都">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>稚神君&#39;s Blog</title>
+    <title>极验3.0滑块验证码破解 | 稚神君&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon3.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -266,12 +265,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">极验3.0滑块验证码破解</h1>
                 </div>
             </div>
         </div>
@@ -385,12 +384,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E9%AA%8C%E8%AF%81%E7%A0%81/">
+                                <span class="chip bg-color">验证码</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%88%AC%E8%99%AB/" class="post-category">
+                                爬虫
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -399,7 +411,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-02-08
+                    2021-02-15
                 </div>
                 
 
@@ -408,7 +420,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.7k
+                    2.8k
                 </div>
                 
 
@@ -420,11 +432,6 @@
                 
 
                 
-                    <div id="busuanzi_container_page_pv" class="info-break-policy">
-                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
-                        <span id="busuanzi_value_page_pv"></span>
-                    </div>
-				
             </div>
         </div>
         <hr class="clearfix">
@@ -438,9 +445,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一、简述："><a href="#一、简述：" class="headerlink" title="一、简述："></a>一、简述：</h2><pre><code>   最近无聊想搞一下极验的滑块验证码破解这块，发现破解js代码耗时又耗力出现版本更新可能以前的所有努力都要推翻重做，不够通用性，最后还是选用selenium + PIL 来实现滑块验证码的破解。
-   期间也翻阅过很多文章,大多都已经失效，并且缺口位置查找和模拟滑动轨迹成功率很低，很难应用到实际开发项目中，本次是针对最新版本的极验滑块验证码进行破解。
-</code></pre>
+                <h2 id="一、简述："><a href="#一、简述：" class="headerlink" title="一、简述："></a>一、简述：</h2><p>   最近无聊想搞一下极验的滑块验证码破解这块，发现破解js代码耗时又耗力出现版本更新可能以前的所有努力都要推翻重做，不够通用性，最后还是选用selenium + PIL 来实现滑块验证码的破解。<br>   期间也翻阅过很多文章,大多都已经失效，并且缺口位置查找和模拟滑动轨迹成功率很低，很难应用到实际开发项目中，本次是针对最新版本的极验滑块验证码进行破解。<br>   selenium+计算滑动缺口坐标算法=99%正确率</p>
 <h2 id="二、项目环境"><a href="#二、项目环境" class="headerlink" title="二、项目环境"></a>二、项目环境</h2><p>大致需要用到以下模块各位看观请提前准备好:<br>python3.6、selenium、numpy、PIL、chromedriver</p>
 <h2 id="三、分析步骤以及代码编写"><a href="#三、分析步骤以及代码编写" class="headerlink" title="三、分析步骤以及代码编写"></a>三、分析步骤以及代码编写</h2><p>首先分析目标网站（本次主要以geetest官网滑块demo为参考）<br><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy8xODA5MjMwNS0yMDNiYWI3MmYzNmYzYmYzLnBuZw?x-oss-process=image/format,png" alt="在这里插入图片描述"><br>网站大致长这个样子，首先f12打开 开发者工具选择Elements查看节点，发现最新版本的滑块图片是使用画布来进行呈现的，期间查阅大量文档，使用如下代码获得画布中的图片数据，获取到的图片是base64进行编码的</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">document.getElementsByClassName<span class="token punctuation">(</span><span class="token string">"geetest_canvas_bg geetest_absolute"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>.toDataURL<span class="token punctuation">(</span><span class="token string">"image/png"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -979,7 +984,7 @@ class SeleniumSpider<span class="token punctuation">(</span>WebDriver<span class
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://zhishenjun28.github.io/2022/02/08/ji-yan-hua-kuai-yan-zheng-ma-po-jie-zui-xin-ban/">https://zhishenjun28.github.io/2022/02/08/ji-yan-hua-kuai-yan-zheng-ma-po-jie-zui-xin-ban/</a>
+                    <a href="https://zhishenjun28.github.io/2021/02/15/ji-yan-hua-kuai-yan-zheng-ma-po-jie-zui-xin-ban/">https://zhishenjun28.github.io/2021/02/15/ji-yan-hua-kuai-yan-zheng-ma-po-jie-zui-xin-ban/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1016,7 +1021,11 @@ class SeleniumSpider<span class="token punctuation">(</span>WebDriver<span class
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E9%AA%8C%E8%AF%81%E7%A0%81/">
+                                    <span class="chip bg-color">验证码</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1066,13 +1075,13 @@ class SeleniumSpider<span class="token punctuation">(</span>WebDriver<span class
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/02/08/pa-chong-yan-zheng-ma-po-j-dian-ji-xuan-zhuan-yan-zheng-ma/">
+                <a href="/2021/03/15/java-fan-she-ji-chu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Java反射基础">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">Java反射基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1083,15 +1092,27 @@ class SeleniumSpider<span class="token punctuation">(</span>WebDriver<span class
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-02-08
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-15
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            稚神君
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
+                                    后端
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1103,13 +1124,13 @@ class SeleniumSpider<span class="token punctuation">(</span>WebDriver<span class
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/01/18/hexomatery/">
+                <a href="/2021/01/15/ru-he-gao-xiao-xue-xi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="hexoMatery">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="如何高效学习">
                         
-                        <span class="card-title">hexoMatery</span>
+                        <span class="card-title">如何高效学习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1120,15 +1141,27 @@ class SeleniumSpider<span class="token punctuation">(</span>WebDriver<span class
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-15
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            稚神君
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">学习</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1276,23 +1309,11 @@ class SeleniumSpider<span class="token punctuation">(</span>WebDriver<span class
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">28k</span>
+                        class="white-color">27.9k</span>
             
             
             
-                
             
-            
-                <span id="busuanzi_container_site_pv">
-                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
-                    <span id="busuanzi_value_site_pv" class="white-color"></span>
-            </span>
-            
-            
-                <span id="busuanzi_container_site_uv">
-                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
-                    <span id="busuanzi_value_site_uv" class="white-color"></span>
-            </span>
             
             <br>
 
@@ -1355,7 +1376,7 @@ class SeleniumSpider<span class="token punctuation">(</span>WebDriver<span class
             <br>
             
         </div>
-        <div class="col s12 m4 l4 social-link social-statis">
+        <div class="col s12 m4 l4 social-link ">
     <a href="https://github.com/" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
@@ -1539,8 +1560,6 @@ $(function () {
 </script>
 
     
-    
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
 
     
